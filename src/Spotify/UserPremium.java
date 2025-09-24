@@ -4,7 +4,7 @@ public class UserPremium extends User {
 
 
     public UserPremium () {
-        super (hasAds, canDownload);
+//        super (hasAds, canDownload);
         this.hasAds = false;
         this.canDownload = true;
     }

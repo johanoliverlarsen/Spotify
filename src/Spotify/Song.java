@@ -9,8 +9,8 @@ public class Song {
 
     //Konstruktør
     public Song(String title, Genre genre){
-        this.title;
-        this.genre;
+        this.title = title;
+        this.genre = genre;
     }
     //Getters
 
@@ -44,5 +44,5 @@ public class Song {
     songs.add(new Song("BEN", Genre.RAP));
     songs.add(new Song("Gettin Jiggy Wit It", Genre.HIPHOP));*/
 
-    }
+
 }

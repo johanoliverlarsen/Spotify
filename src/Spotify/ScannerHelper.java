@@ -3,11 +3,9 @@ package Spotify;
 import java.util.Scanner;
 
 public class ScannerHelper {
-
     private Scanner sc;
 
     //Constructor
-
     public ScannerHelper () {
         this.sc = new Scanner(System.in);
     }
@@ -58,7 +56,7 @@ public class ScannerHelper {
 
         while (!numCorrect) {
 
-            if sc.hasNextInt() {
+            if (sc.hasNextInt()) {
                 selectInt = sc.nextInt();
                 sc.nextLine();
 

@@ -1,6 +1,8 @@
+package Spotify;
+
 import java.util.ArrayList;
 
-public class SpotifyTest {
+public class SpotifyTest{
     public static void main(String[] args) {
 
      runSpotify();
@@ -8,15 +10,16 @@ public class SpotifyTest {
     }
 
     static void runSpotify() {
-        ScannerHelper sc = new ScannerHelper();
-        sc.welcomeMessage;
+
+        ScannerHelper Sc = new ScannerHelper();
+        Sc.welcomeMessage();
 
         ArrayList<String> songArrayList = new ArrayList<>();
         boolean running = true;
-
+/*
         public void run(){
             while (running) {
-                int choice = sc.chooseOption();
+                int choice = Sc.chooseOption();
                 switch (choice){
                     case 1 -> addSong();
                     case 2 -> removeSong();
@@ -26,11 +29,11 @@ public class SpotifyTest {
                     default -> System.out.println("Invalid choice, try agian");
                 }
 
-
+*/
             }
-        }
+        
 
-
+/*
         public static void chooseOption() {
             while (running) {
 
@@ -53,6 +56,8 @@ public class SpotifyTest {
 
 
     }
+
+ */
 }
 
 

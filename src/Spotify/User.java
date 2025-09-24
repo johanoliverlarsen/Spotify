@@ -5,9 +5,9 @@ package Spotify;
         protected boolean canDownload;
 
         //constructor
-        public User(boolean hasAds, boolean canDownload) {
-            this.hasAds = hasAds;
-            this.canDownload = canDownload;
+        public User() {
+//            this.hasAds = false;
+//            this.canDownload = false;
         }
 
         //Getters
@@ -30,7 +30,7 @@ package Spotify;
 
         @Override
         public String toString() {
-            return "Has ads: " + hasAds ", can download: " + canDownload;
+            return "Has ads: " + hasAds + ", can download: " + canDownload;
         }
 
 

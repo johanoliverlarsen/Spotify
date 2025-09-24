@@ -4,7 +4,7 @@ public class UserFree extends User {
 
 
     public UserFree () {
-        super (hasAds, canDownload);
+//        super (hasAds, canDownload);
         this.hasAds = true;
         this.canDownload = false;
     }
