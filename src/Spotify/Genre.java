@@ -9,4 +9,6 @@ public enum Genre {
     JAZZ,
     GRIME,
     DAK,
+    HOUSE,
+
 }
