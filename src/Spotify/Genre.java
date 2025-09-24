@@ -1,3 +1,5 @@
+package Spotify;
+
 public enum Genre {
     POP,
     ROCK,
