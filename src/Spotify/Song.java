@@ -1,5 +1,7 @@
 package Spotify;
 
+import java.util.ArrayList;
+
 public class Song {
     private String title;
     private Genre genre;
@@ -32,5 +34,15 @@ public class Song {
     @Override
     public String toString(){
         return title + genre;
+    }
+    ArrayList<Song>songs =  new ArrayList<>();
+    songs.add(new Song("Darude Sandstorm", Genre.POP));
+    songs.add(new Song("UNZ", Genre.DAK));
+    songs.add(new Song("Autumn Leaves", Genre.JAZZ));
+    songs.add(new Song("Shape Of You", Genre.ROCK));
+    songs.add(new Song("Søren Banjomus", Genre.GRIME));
+    songs.add(new Song("BEN", Genre.RAP));
+    songs.add(new Song("Gettin Jiggy Wit It", Genre.HIPHOP));
+
     }
 }
