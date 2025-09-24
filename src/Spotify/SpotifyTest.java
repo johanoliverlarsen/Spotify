@@ -7,17 +7,33 @@ public class SpotifyTest {
 
     }
 
-    public static void runSpotify() {
+
+
+
+    static void runSpotify() {
+        ScannerHelper sc = new ScannerHelper();
+        sc.welcomeMessage;
+        /
         ArrayList<String> songArrayList = new ArrayList<>();
         boolean running = true;
-        /*
+
         public void run(){
             while (running) {
-                int choice = chooseOption()
+                int choice = chooseOption();
+                switch (choice){
+                    case 1 -> addSong();
+                    case 2 -> removeSong();
+                    case 3 -> showAllSongs();
+                    case 4 -> editSongTitle();
+                    case 5 -> running = false;
+                    default -> System.out.println("Invalid choice, try agian");
+                }
+
+
             }
         }
 
-*/
+
         public static void chooseOption() {
             while (running) {
 
@@ -36,6 +52,9 @@ public class SpotifyTest {
                         System.out.println("Song found: " + song);
                     }
                 }
+
+
+
     }
 }
 
