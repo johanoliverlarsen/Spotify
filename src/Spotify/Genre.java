@@ -1,3 +1,5 @@
+package Spotify;
+
 public enum Genre {
     POP,
     ROCK,
@@ -7,4 +9,6 @@ public enum Genre {
     JAZZ,
     GRIME,
     DAK,
+    HOUSE,
+
 }
