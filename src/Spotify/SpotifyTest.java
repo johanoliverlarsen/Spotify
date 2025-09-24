@@ -7,19 +7,16 @@ public class SpotifyTest {
 
     }
 
-
-
-
     static void runSpotify() {
         ScannerHelper sc = new ScannerHelper();
         sc.welcomeMessage;
-        /
+
         ArrayList<String> songArrayList = new ArrayList<>();
         boolean running = true;
 
         public void run(){
             while (running) {
-                int choice = chooseOption();
+                int choice = sc.chooseOption();
                 switch (choice){
                     case 1 -> addSong();
                     case 2 -> removeSong();
