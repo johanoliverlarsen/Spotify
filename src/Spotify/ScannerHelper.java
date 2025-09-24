@@ -14,6 +14,16 @@ public class ScannerHelper {
 
     public void welcomeMessage() {
         System.out.println("Welcome!");
+
+        System.out.println("\nChoose option:");
+        System.out.println("1: Add song");
+        System.out.println("2: Remove song");
+        System.out.println("3: Show all songs");
+        System.out.println("4: Search for song");
+        System.out.println("5: Edit song title");
+        System.out.println("6: Finish");
+        System.out.print("Choose option (1-6): ");
+
     }
 
     public int selectUser() {

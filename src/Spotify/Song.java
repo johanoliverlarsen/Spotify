@@ -8,7 +8,7 @@ public class Song {
 
 
     //Konstruktør
-    public song(String title, Genre genre){
+    public Song(String title, Genre genre){
         this.title;
         this.genre;
     }
@@ -35,14 +35,14 @@ public class Song {
     public String toString(){
         return title + genre;
     }
-    ArrayList<Song>songs =  new ArrayList<>();
+    /*ArrayList<Song>songs =  new ArrayList<>();
     songs.add(new Song("Darude Sandstorm", Genre.POP));
     songs.add(new Song("UNZ", Genre.DAK));
     songs.add(new Song("Autumn Leaves", Genre.JAZZ));
     songs.add(new Song("Shape Of You", Genre.ROCK));
     songs.add(new Song("Søren Banjomus", Genre.GRIME));
     songs.add(new Song("BEN", Genre.RAP));
-    songs.add(new Song("Gettin Jiggy Wit It", Genre.HIPHOP));
+    songs.add(new Song("Gettin Jiggy Wit It", Genre.HIPHOP));*/
 
     }
 }
