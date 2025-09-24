@@ -33,7 +33,7 @@ public class Song {
     }
     @Override
     public String toString(){
-        return title + genre;
+        return "Title: " + title + ", Genre: " + genre;
     }
     /*ArrayList<Song>songs =  new ArrayList<>();
     songs.add(new Song("Darude Sandstorm", Genre.POP));
