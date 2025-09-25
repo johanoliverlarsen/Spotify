@@ -6,6 +6,7 @@ public class SpotifyTest{
 
     private static ScannerHelper Sc = new ScannerHelper();
     private static ArrayList<Song> playlist = new ArrayList<>();
+    private static boolean running = true;
 
     public static void main(String[] args) {
 
@@ -25,11 +26,9 @@ public class SpotifyTest{
 
 
 
-        boolean running = true;
-//        chooseUserOption();
 
 
-        while (1 != 0) {
+        while (running) {
             int choice = Sc.selectOption();
             switch (choice) {
                 case 1 -> addSong();
@@ -37,7 +36,7 @@ public class SpotifyTest{
                 case 3 -> showAllSongs();
                 //case 4 -> searchSong();
                 case 5 -> editSong();
-              //  case 6 -> break;
+                case 6 -> endProgram();
             }
         }
 
@@ -59,6 +58,7 @@ public class SpotifyTest{
         int listInt = 1;
         int answer = 0;
 
+        System.out.println();
         for (Song s : playlist) {
             System.out.println(listInt + ". " + s);
             listInt++;
@@ -68,7 +68,7 @@ public class SpotifyTest{
             System.out.println("Which song do you want to remove?");
             System.out.print("Select song 1 to " + playlistIntMax + ": ");
             answer = Sc.playlistIntValidation(playlistSize);
-        System.out.println("The user typed " + answer);
+    //      System.out.println("The user typed " + answer);
             int playlistIndex = answer - 1;
             String songToRemove = playlist.get(playlistIndex).toString();
             playlist.remove((playlistIndex));
@@ -78,7 +78,7 @@ public class SpotifyTest{
 
     public static void showAllSongs() {
         int listInt = 1;
-
+        System.out.println();
         for (Song s : playlist) {
 
             System.out.println(listInt + ": " + s);
@@ -92,6 +92,7 @@ public class SpotifyTest{
         int listInt = 1;
         int answer = 0;
 
+        System.out.println();
         for (Song s : playlist) {
             System.out.println(listInt + ". " + s);
             listInt++;
@@ -100,7 +101,7 @@ public class SpotifyTest{
         System.out.println("Which song do you want to edit?");
         System.out.print("Select song 1 to " + playlistIntMax + ": ");
         answer = Sc.playlistIntValidation(playlistSize);
-        System.out.println("The user typed " + answer);
+  //      System.out.println("The user typed " + answer);
         int playlistIndex = answer - 1;
 
         String songTitle = Sc.askSongTitle();
@@ -108,6 +109,34 @@ public class SpotifyTest{
 
         playlist.get(playlistIndex).setTitle(songTitle);
         playlist.get(playlistIndex).setGenre(songGenre);
+
+    }
+
+    public static void searchSong() {
+
+        System.out.println("Please enter song to seach for below.");
+        //først brug askSongTitle til input af titel
+        String answer = Sc.askSongTitle();
+
+        for (Song s : playlist) {
+            //if (// songTitle.contains(userInput))
+                // True, break, Ja den er der
+            //get songTitle
+            // user intput
+            // songTitle.contains(userInput)
+            //brug string .contains() metode og lav getter, så du sammen ligner navnet
+        }
+
+
+
+        //https://www.w3schools.com/java/ref_string_contains.asp
+
+    }
+
+
+    public static void endProgram() {
+        running = false;
+        System.out.println("The program have been TERMINATED");
 
     }
 

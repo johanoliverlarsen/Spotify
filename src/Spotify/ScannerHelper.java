@@ -147,28 +147,19 @@ public class ScannerHelper {
             answer = answer.toUpperCase();
 
             for (Genre g : Genre.values()) {
-                System.out.println("answer: "+ answer);
-                System.out.println("genre: " + g);
-                System.out.println("answerCorrect" + answerCorrect);
+    //
                 if (answer.equals(g.name())) {
                     answerCorrect = true;
-                    System.out.println("it's true");
-                  //  return answer;
                     break;
                 }
-
 
             } if (!answerCorrect) {
                 System.out.println("That's not a genre");
             }
         }
-
         return Genre.valueOf(answer);
-
-
-
     }
 
- //   public
+
 
 }
