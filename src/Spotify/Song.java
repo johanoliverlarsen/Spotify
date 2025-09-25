@@ -31,6 +31,7 @@ public class Song {
     public void setGenre(Genre genre) {
         this.genre = genre;
     }
+
     @Override
     public String toString(){
         return "Title: " + title + ", Genre: " + genre;

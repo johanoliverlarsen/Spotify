@@ -16,7 +16,6 @@ public class SpotifyTest{
 
     public static void runSpotify() {
 
- //       ScannerHelper Sc = new ScannerHelper();
         Sc.welcomeMessage();
 
         Sc.selectUser();
@@ -36,9 +35,9 @@ public class SpotifyTest{
                 case 1 -> addSong();
                 case 2 -> removeSong();
                 case 3 -> showAllSongs();
-                //             case 4 -> editSongTitle();
-                //             case 5 -> running = false;
-                //             default -> System.out.println("Invalid choice, try agian");
+                //case 4 -> searchSong();
+                case 5 -> editSong();
+              //  case 6 -> break;
             }
         }
 
@@ -46,7 +45,7 @@ public class SpotifyTest{
 
     public static void addSong() {
         //something
-        ScannerHelper Sc = new ScannerHelper();
+    //    ScannerHelper Sc = new ScannerHelper();
         System.out.println("TEST");
         String songTitle = Sc.askSongTitle();
         Genre songGenre = Sc.askSongGenre();
@@ -55,13 +54,61 @@ public class SpotifyTest{
     }
 
     public static void removeSong() {
-        //something
+        int playlistSize = playlist.size();
+        int playlistIntMax = playlistSize + 1;
+        int listInt = 1;
+        int answer = 0;
+
+        for (Song s : playlist) {
+            System.out.println(listInt + ". " + s);
+            listInt++;
+        }
+
+
+            System.out.println("Which song do you want to remove?");
+            System.out.print("Select song 1 to " + playlistIntMax + ": ");
+            answer = Sc.playlistIntValidation(playlistSize);
+        System.out.println("The user typed " + answer);
+            int playlistIndex = answer - 1;
+            String songToRemove = playlist.get(playlistIndex).toString();
+            playlist.remove((playlistIndex));
+            System.out.println("Succesfully removed " + songToRemove);
+
     }
 
     public static void showAllSongs() {
+        int listInt = 1;
+
         for (Song s : playlist) {
-            System.out.println(s);
+
+            System.out.println(listInt + ": " + s);
+            listInt++;
         }
+    }
+
+    public static void editSong() {
+        int playlistSize = playlist.size();
+        int playlistIntMax = playlistSize + 1;
+        int listInt = 1;
+        int answer = 0;
+
+        for (Song s : playlist) {
+            System.out.println(listInt + ". " + s);
+            listInt++;
+        }
+
+        System.out.println("Which song do you want to edit?");
+        System.out.print("Select song 1 to " + playlistIntMax + ": ");
+        answer = Sc.playlistIntValidation(playlistSize);
+        System.out.println("The user typed " + answer);
+        int playlistIndex = answer - 1;
+
+        String songTitle = Sc.askSongTitle();
+        Genre songGenre = Sc.askSongGenre();
+
+        playlist.get(playlistIndex).setTitle(songTitle);
+        playlist.get(playlistIndex).setGenre(songGenre);
+
     }
 
     public static void addDefaultPlaylist() {

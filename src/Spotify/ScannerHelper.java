@@ -95,6 +95,35 @@ public class ScannerHelper {
         return selectInt;
     }
 
+    public int playlistIntValidation(int intMax) {
+        boolean numCorrect = false;
+        int selectInt = 0;
+        int selectIntMax = intMax;
+
+
+        while (!numCorrect) {
+
+            if (sc.hasNextInt()) {
+                selectInt = sc.nextInt();
+                sc.nextLine();
+
+                if (selectInt < 0) {
+                    System.out.println("You have entered a negative number. Try again");
+                } else if (selectInt == 0) {
+                    System.out.println("You cannot enter 0. Try again");
+                } else if (selectInt > selectIntMax) {
+                    System.out.println("You cannot enter numbers larger than " + selectIntMax + ". Try again");
+                } else {
+                    numCorrect = true;
+                }
+            } else {
+                System.out.println("That's not a number. Try again");
+                sc.nextLine(); // rydder forkert input
+            }
+        }
+        return selectInt;
+    }
+
 
     public String askSongTitle() {
         System.out.print("What is the name of the song?: ");
