@@ -42,7 +42,8 @@ public class Song {
     songs.add(new Song("Shape Of You", Genre.ROCK));
     songs.add(new Song("Søren Banjomus", Genre.GRIME));
     songs.add(new Song("BEN", Genre.RAP));
-    songs.add(new Song("Gettin Jiggy Wit It", Genre.HIPHOP));*/
+    songs.add(new Song("Gettin Jiggy Wit It", Genre.HIPHOP));
+    */
 
 
 }
