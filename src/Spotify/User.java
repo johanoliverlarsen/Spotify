@@ -1,5 +1,6 @@
 package Spotify;
 
+    //Superclass
     public class User {
         protected boolean hasAds;
         protected boolean canDownload;

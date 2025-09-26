@@ -2,6 +2,8 @@ package Spotify;
 
 import java.util.ArrayList;
 
+
+
 public class SpotifyTest{
 
     private static ScannerHelper Sc = new ScannerHelper();
@@ -114,11 +116,32 @@ public class SpotifyTest{
 
     public static void searchSong() {
 
-        System.out.println("Please enter song to seach for below.");
+        System.out.println("Please enter song to search for below.");
         //først brug askSongTitle til input af titel
+
         String answer = Sc.askSongTitle();
 
+
+        /*
+        if(playlist.contains(answer)) {
+            System.out.println("The song is in the playlist!");
+        } else {
+            System.out.println("No match found");
+        }
+        */
+
+
+
+
+
+
+        /*
         for (Song s : playlist) {
+            if(s.contains(answer)){
+
+
+
+            }
             //if (// songTitle.contains(userInput))
                 // True, break, Ja den er der
             //get songTitle
@@ -130,6 +153,8 @@ public class SpotifyTest{
 
 
         //https://www.w3schools.com/java/ref_string_contains.asp
+
+         */
 
     }
 

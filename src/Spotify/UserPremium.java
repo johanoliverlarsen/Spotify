@@ -2,7 +2,7 @@ package Spotify;
 
 public class UserPremium extends User {
 
-
+    //Inherited class
     public UserPremium () {
 //        super (hasAds, canDownload);
         this.hasAds = false;
